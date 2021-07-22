@@ -1,9 +1,9 @@
-build-webos
+build-webos-robot
 ===========
 
 Summary
 -------
-Build webOS OSE (Open Source Edition) images
+Build webOS OSE (Open Source Edition) images for Nvidia jetson AGX and Nano devices
 
 Description
 -----------
@@ -13,7 +13,7 @@ Cloning
 =======
 Set up build-webos by cloning its Git repository:
 
-     git clone https://github.com/webosose/build-webos.git
+     git clone https://github.com/flowergom/build-webos-robot.git
 
 Note: If you populate it by downloading an archive (zip or tar.gz file), then you will get the following error when you run mcf:
 
@@ -25,7 +25,7 @@ Prerequisites
 =============
 Before you can build, you will need some tools.  If you try to build without them, bitbake will fail a sanity check and tell you what's missing, but not really how to get the missing pieces. On Ubuntu, you can force all of the missing pieces to be installed by entering:
 
-    $ cd build-webos
+    $ cd build-webos-robot
     $ sudo scripts/prerequisites.sh
 
 Also, the bitbake sanity check will issue a warning if you're not running under Ubuntu 18.04 64bit LTS.
@@ -33,9 +33,9 @@ Also, the bitbake sanity check will issue a warning if you're not running under 
 
 Building
 ========
-To configure the build for the raspberrypi4 and to fetch the sources:
+To configure the build for the agx/nano and to fetch the sources:
 
-    $ ./mcf -p 0 -b 0 raspberrypi4
+    $ ./mcf -p 0 -b 0 jetson-nano-devkit (jetson-agx-xavier-devkit)
 
 The `-p 0` and `-b 0` options set the make and bitbake parallelism values to the number of CPU cores found on your computer.
 
@@ -87,7 +87,7 @@ Copyright and License Information
 =================================
 Unless otherwise specified, all content, including all source code files and documentation files in this repository are:
 
-Copyright (c) 2008-2019 LG Electronics, Inc.
+Copyright (c) 2021 LG Electronics, Inc.
 
 All content, including all source code files and documentation files in this repository except otherwise noted are: Licensed under the Apache License, Version 2.0 (the "License"); you may not use this content except in compliance with the License. You may obtain a copy of the License at
 

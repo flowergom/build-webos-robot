@@ -53,7 +53,7 @@
 Distribution = "webos"
 
 # Supported MACHINE-s
-Machines = ['qemux86', 'raspberrypi3', 'raspberrypi4']
+Machines = ['qemux86', 'raspberrypi3', 'raspberrypi4','jetson-agx-xavier-devkit','jetson-nano-devkit']
 
 # github.com/openembedded repositories are read-only mirrors of the authoritative
 # repositories on git.openembedded.org
@@ -75,6 +75,8 @@ webos_layers = [
 ('meta-qt5-compat',           19, 'git://github.com/webosose/meta-webosose',                '', ''),
 ('meta-qt5',                  20, 'git://github.com/meta-qt5/meta-qt5.git',                 'branch=warrior,commit=6310c5c', ''),
 
+('meta-tegra',                30, 'https://github.com/madisongh/meta-tegra.git',            'branch=dunfell-l4t-r32.5.0,commit=65b548a', ''),
+
 ('meta-webos-backports-3.2',  33, 'git://github.com/webosose/meta-webosose',                '', ''),
 
 ('meta-webos',                40, 'git://github.com/webosose/meta-webosose.git',            'branch=master,commit=24016816c', ''),
@@ -86,4 +88,8 @@ webos_layers = [
 
 ('meta-webos-smack',          75, 'git://github.com/webosose/meta-webosose.git',            '', ''),
 ('meta-security',             77, 'git://git.yoctoproject.org/meta-security',               'branch=dunfell,commit=93232ae', ''),
+
+('meta-webos-robot',          80, 'git://github.com/flowergom/meta-webos-robot.git',        'branch=master,commit=51f1f2b', ''),
+('meta-webos-tegra',          81, 'git://github.com/flowergom/meta-webos-robot.git',        '', ''),
+
 ]
