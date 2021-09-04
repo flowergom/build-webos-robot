@@ -78,6 +78,10 @@ webos_layers = [
 ('meta-tegra',                30, 'https://github.com/madisongh/meta-tegra.git',            'branch=dunfell-l4t-r32.5.0,commit=65b548a', ''),
 
 ('meta-webos-backports-3.2',  33, 'git://github.com/webosose/meta-webosose',                '', ''),
+('meta-ros-backports-gatesgarth', 36, 'git://github.com/ros/meta-ros.git',                  '', ''),
+('meta-ros-common',               37, 'git://github.com/ros/meta-ros.git',                  'branch=dunfell,commit=67fd21d38', ''),
+('meta-ros2',                     38, 'git://github.com/ros/meta-ros.git',                  '', ''),
+('meta-ros2-foxy',                39, 'git://github.com/ros/meta-ros.git',                  '', ''),
 
 ('meta-webos',                40, 'git://github.com/webosose/meta-webosose.git',            'branch=master,commit=24016816c', ''),
 
@@ -86,10 +90,12 @@ webos_layers = [
 ('meta-webos-updater',        52, 'git://github.com/webosose/meta-webosose.git',            '', ''),
 ('meta-webos-virtualization', 53, 'git://github.com/webosose/meta-webosose.git',            '', ''),
 
+('meta-ros-webos',            60, 'git://github.com/ros/meta-ros-webos.git',                'branch=dunfell,commit=67cbe89', ''),
+
 ('meta-webos-smack',          75, 'git://github.com/webosose/meta-webosose.git',            '', ''),
 ('meta-security',             77, 'git://git.yoctoproject.org/meta-security',               'branch=dunfell,commit=93232ae', ''),
 
-('meta-webos-robot',          80, 'git://github.com/flowergom/meta-webos-robot.git',        'branch=master,commit=66653db', ''),
+('meta-webos-robot',          80, 'git://github.com/flowergom/meta-webos-robot.git',        'branch=master,commit=82fd171', ''),
 ('meta-webos-tegra',          81, 'git://github.com/flowergom/meta-webos-robot.git',        '', ''),
 
 ]
